@@ -8,5 +8,8 @@ describe DockingStation do
   it "Gets a bike and checks it's working" do
     bike = subject.release_bike
     expect(bike.working?).to eq(true)
+  
+  it "docks bike" do
+    expect(subject.dock_bike).to eq(true)
   end
 end
