@@ -41,6 +41,16 @@ describe DockingStation do
     20.times{subject.bikes << bike} 
     expect { subject.dock_bike(bike) }.to raise_error(StandardError)
 
+
   end
+
+  it 'return true if docking station is full' do
+    bike = Bike.new
+    docking_station = DockingStation.new
+    20.times{subject.bikes << bike} 
+    expect(subject.full?).to eq(true) 
+  end 
+
+  
 
 end

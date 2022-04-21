@@ -21,11 +21,17 @@ class DockingStation
 
   end
 
+  def full?
+    if @bikes.length >= 20
+      true
+    end 
+  end
+
   
 
   def dock_bike(bike)
     
-    if @bikes.length >= 20
+    if @bikes.full?
       raise StandardError
     else
       bike = Bike.new
