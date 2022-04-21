@@ -38,7 +38,7 @@ describe DockingStation do
 
     bike = Bike.new
     docking_station = DockingStation.new
-    subject.bikes << bike
+    20.times{subject.bikes << bike} 
     expect { subject.dock_bike(bike) }.to raise_error(StandardError)
 
   end

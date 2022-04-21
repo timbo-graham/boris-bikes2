@@ -15,6 +15,8 @@ class DockingStation
 
     if @bikes.empty?
       raise StandardError
+    else
+      Bike.new 
     end
 
   end
@@ -23,7 +25,7 @@ class DockingStation
 
   def dock_bike(bike)
     
-    if @bikes.length > 0
+    if @bikes.length >= 20
       raise StandardError
     else
       bike = Bike.new
