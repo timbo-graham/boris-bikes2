@@ -23,8 +23,12 @@ class DockingStation
 
   def dock_bike(bike)
     
-   bike = Bike.new
-   @bikes << bike
+    if @bikes.length > 0
+      raise StandardError
+    else
+      bike = Bike.new
+      @bikes << bike
+    end
 
   end
 
